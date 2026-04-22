@@ -1,0 +1,129 @@
+.footer {
+  background: linear-gradient(180deg, var(--navy) 0%, #050816 100%);
+  padding: 80px 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(96, 165, 250, 0.1);
+}
+
+.footer-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Photo strip */
+.footer-photos {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-photo {
+  width: 100px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.footer-photo:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.footer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Main */
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-cake {
+  font-size: 4rem;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 30px rgba(245, 158, 11, 0.4));
+}
+
+.footer-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  background: linear-gradient(135deg, #60a5fa, #fcd34d, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: shimmer 5s linear infinite;
+  line-height: 1.2;
+}
+
+.footer-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.footer-balloons {
+  display: flex;
+  gap: 16px;
+  font-size: 1.8rem;
+}
+
+.balloon {
+  animation: float 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.footer-hearts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.heart-pulse {
+  font-size: 1.4rem;
+  animation: heart-beat 1.5s ease-in-out infinite;
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
+
+.footer-copyright {
+  color: rgba(148, 163, 184, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}

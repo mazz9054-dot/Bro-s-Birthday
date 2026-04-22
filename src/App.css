@@ -1,0 +1,32 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Floating confetti button */
+.confetti-trigger {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.5);
+  transition: all 0.3s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.confetti-trigger:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 40px rgba(37, 99, 235, 0.7);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
